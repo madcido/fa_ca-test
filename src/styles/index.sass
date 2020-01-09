@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
+@import 'flex_helper'
+@import 'vars'
+@import animations
+
+body
+    font-family: 'Open Sans', Arial, sans-serif
+    color: $darkgray
+    background-color: #f8f8f8
+    > div
+        background-color: #fff
+        box-shadow: 0 0 10px #e8e8e8
+        box-sizing: border-box
+        width: 1280px
+        max-width: 90%
+        margin: 30px auto
+        padding: 40px
+        min-height: 500px
+
+body, h1, h2, p
+    margin: 0
+
+h1
+    color: $lightgray
+    font-size: 24px
+    font-weight: 400
+    line-height: 40px
+
+.button--outlined
+    background-color: transparent
+    border: 1px solid $blueish
+    border-radius: 3px
+    font-size: 14px
+    font-weight: 600
+    color: $blueish
+    text-transform: uppercase
+    padding: 7px 15px
+    min-width: 90px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+
+.button--filled
+    background-color: #f0f0f0
+    border: none
+    font-size: 20px
+    color: $darkgray
+    padding: 5px 10px
+    display: flex
+    align-items: center
+    cursor: pointer
+    &:hover
+        background-color: $blueish
+        color: #fff
+
+.icon-field ion-icon
+    font-size: 18px
+    fill: transparent
+    stroke: $lightgray
+    stroke-width: 20px
+    margin-right: 10px
+
+.backdrop
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+.fancy-input
+    margin: 10px 0 25px 0
+    width: 250px
+    position: relative
+    label
+        text-transform: uppercase
+        font-size: 16px
+        color: $lightgray
+        line-height: 40px
+        position: absolute
+        top: 0
+        left: 0
+        transition: all 0.2s ease
+    input
+        box-sizing: border-box
+        width: 100%
+        padding: 10px 0
+        border: none
+        border-bottom: 1px solid $lightergray
+        font-size: 16px
+        color: $darkgray
+        transition: all 0.2s ease
+        &:focus
+            outline: none
+            border-bottom-color: $blueish
+            + label
+                color: $blueish
+
+.fancy-input--focused,
+.fancy-input--filled
+    label
+        font-size: 12px
+        line-height: 20px
+        top: -10px
+
+@media (max-width: 980px)
+    body > div
+        width: 100%
+        max-width: 420px
+        padding: 30px
+
+@import 'header'
+
+@import 'about'

@@ -1,0 +1,170 @@
+.header
+    padding: 0
+    min-height: 0
+
+.header__logout-button
+    align-self: flex-end
+    margin: 25px
+
+.header__coverpic-button
+    border-color: $lightergray
+    color: $lightgray
+    text-transform: capitalize
+    font-weight: 400
+    align-self: center
+    ion-icon
+        font-size: 24px
+        fill: $lightergray
+        margin-right: 15px
+
+.header__tabs
+    background-color: #fff
+    box-shadow: 0 0 4px #e8e8e8
+    padding-left: 195px
+    user-select: none
+    overflow: auto
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        display: none
+
+.header__tab
+    box-sizing: border-box
+    cursor: pointer
+    white-space: nowrap
+    text-transform: uppercase
+    height: 56px
+    line-height: 56px
+    margin-left: 25px
+    border-bottom: 2px solid transparent
+    transition:  border 0.3s ease
+
+.header__tab:hover,
+.header__tab--selected
+    border-bottom: 2px solid $blueish
+
+.profile
+    height: 120px
+
+.profile__avatar
+    box-shadow: 0 0 20px #ccc
+    width: $big-img-size
+    height: $big-img-size
+    margin: 25px
+    overflow: hidden
+    position: relative
+    bottom: -60px
+    img
+        margin-left: ($big-img-size - $total-img-size) / 2
+
+.profile__info
+    position: relative
+    flex: 1
+    p
+        margin-bottom: 15px
+        display: flex
+        align-items: center
+    > div:last-of-type
+        align-self: flex-start
+        margin-right: 25px
+
+.profile__info--name
+    font-size: 18px
+    font-weight: 600
+    color: #444
+
+.profile__info--place
+    font-size: 14px
+
+.profile__info--phone
+    font-size: 14px
+
+.profile__info--rating
+    margin-right: 25px
+    ion-icon
+        font-size: 24px
+        margin-right: 5px
+
+.profile__info--reviews
+    font-size: 14px
+    span
+        margin-right: 15px
+
+.profile__info--followers
+    position: absolute
+    right: 25px
+    bottom: -70px
+    line-height: 56px
+    font-size: 14px
+    color: $lightgray
+    span span
+        color: #333
+        margin-right: 7px
+    ion-icon
+        font-size: 32px
+        fill: $lightgray
+        stroke-width: 0
+
+@media (max-width: 980px)
+    .header
+        background-color: transparent
+        box-shadow: none
+
+    .header__logout-button
+        border-color: transparent
+
+    .header__coverpic-button
+        display: none
+
+    .header__tabs
+        padding-left: 0
+        &::after
+            content: ''
+            flex: 0 0 20px
+
+    .profile
+        height: auto
+        flex-direction: column
+        align-items: center
+
+    .profile__avatar
+        width: $small-img-size
+        height: $small-img-size
+        margin: 0
+        bottom: 0
+        img
+            margin-left: ($small-img-size - $total-img-size) / 2
+
+    .profile__info
+        flex-direction: column
+        align-self: stretch
+        margin: 25px
+        > div:last-of-type
+            flex-direction: column
+
+    .profile__info--name
+        align-self: center
+        order: 1
+
+    .profile__info--place
+        order: 3
+
+    .profile__info--phone
+        order: 2
+
+    .profile__info--rating
+        margin-left: -2px
+        ion-icon
+            fill: $blueish
+
+    .profile__info--reviews
+        span
+            margin-left: 4px
+
+    .profile__info--followers
+        position: relative
+        right: 0
+        bottom: 0
+        line-height: 40px
+        color: $darkgray
+        margin-bottom: 0 !important

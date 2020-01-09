@@ -1,0 +1,65 @@
+.about
+    p
+        padding: 0 20px 0 5px
+        background-color: #f8f8f8
+        display: flex
+        align-items: center
+        min-height: 40px
+    > div
+        position: relative
+        margin: 1px 0
+        &:first-of-type
+            align-self: stretch
+            margin: 0 0 30px 0
+            button
+                display: none
+
+.about__name
+    font-weight: 600
+
+.about__edit-popup
+    background-color: #fff
+    border-radius: 3px
+    box-shadow: 0 0 25px #aaa
+    padding: 20px
+    position: absolute
+    top: -5px
+    transform: translateX(100%)
+    animation: slide 0.2s forwards
+    &::before
+        content: ''
+        position: absolute
+        top: 15px
+        left: -10px
+        width: 20px
+        height: 20px
+        transform: rotate(45deg)
+        background-color: #fff
+
+.about__save-button
+    background-color: $blueish
+    color: #fff
+    margin-right: 25px
+
+.about__form > div
+    margin-bottom: 10px
+
+.about__form-button
+    padding: 0
+    margin: 0 15px
+    min-width: 0
+    border-color: transparent
+
+
+@media (max-width: 980px)
+    .about
+        p
+            background-color: transparent
+            padding: 0
+        > div
+            &:first-of-type
+                margin-bottom: 5px
+                button
+                    display: flex
+            &:not(:first-of-type) button
+                display: none
