@@ -1,5 +1,5 @@
 Front-End Test for Styling & JS
 
-Preview: https://bb.githack.com/madcido/fa_ca/raw/master/dist/index.html
+Preview: https://raw.githack.com/madcido/faca-test/master/dist/index.html
 
 Author: Fabio Carmo
